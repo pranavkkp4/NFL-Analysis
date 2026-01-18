@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regression & Winning Analysis</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Salary vs Performance & Winning Analysis</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="analysis.html">Analysis</a>
+    </nav>
+    <div class="container">
+        <section>
+            <h2>Quarterback Salaries vs QBR</h2>
+            <p>
+                We analyzed the relationship between team spending on quarterbacks and on-field efficiency. The scatter plot below shows each team-season’s weighted QBR against its total quarterback salary. The fitted line indicates a weak positive relationship (Pearson correlation = 0.10). In other words, higher spending on quarterbacks shows only a modest association with better quarterback performance.
+            </p>
+            <img src="figures/qb_salary_vs_qbr.png" alt="QB Salary vs QBR" style="width:100%; max-width:800px; display:block; margin:auto;">
+        </section>
+        <section>
+            <h2>Running Back Salaries vs RBR</h2>
+            <p>
+                Similarly, we plotted team spending on running backs against our Running Back Rating. The scatter plot and regression line reveal an even weaker relationship (Pearson correlation = -0.14). This suggests that paying running backs more does not strongly translate into higher rushing efficiency.
+            </p>
+            <img src="figures/rb_salary_vs_rbr.png" alt="RB Salary vs RBR" style="width:100%; max-width:800px; display:block; margin:auto;">
+        </section>
+        <section>
+            <h2>Do Quarterbacks or Running Backs Matter More for Winning?</h2>
+            <p>
+                To assess which position drives team success, we correlated our performance metrics with team wins. The left plot shows that team weighted QBR has a stronger positive correlation with wins (Pearson r = 0.66) than running back efficiency does (Pearson r = 0.00). While correlation does not imply causation, this analysis suggests that quarterback play is more closely associated with winning than running back production.
+            </p>
+            <div style="display:flex; flex-wrap: wrap; gap:20px; justify-content:center;">
+                <img src="figures/qbr_vs_wins.png" alt="QBR vs Wins" style="width:45%; max-width:400px;">
+                <img src="figures/rbr_vs_wins.png" alt="RBR vs Wins" style="width:45%; max-width:400px;">
+            </div>
+            <p>
+                Overall, our regression and correlation analyses indicate that while teams must pay quarterbacks a premium, the return on investment is only moderately positive. In contrast, spending on running backs offers little explanatory power for performance or wins. Moreover, quarterback performance has a stronger relationship with winning than running back efficiency does, underscoring the importance of quarterback play in today’s NFL.
+            </p>
+        </section>
+    </div>
+    <div class="footer">
+        <p>Created by Data Analytics Project • 2026</p>
+    </div>
+</body>
+</html>
