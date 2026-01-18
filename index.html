@@ -16,59 +16,60 @@
   </header>
 
   <main>
-    <section>
-      <h2>Top Quarterbacks by QBR (2015–2025)</h2>
-      <p>
-        This chart shows the top five quarterbacks in each season ranked by
-        Total Quarterback Rating (QBR). QBR is designed to capture a
-        quarterback’s overall impact on winning beyond traditional passing
-        statistics.
-      </p>
-      <img src="figures/top5_qb_by_year.png" alt="Top QBs by QBR" />
-    </section>
 
-    <section>
-      <h2>Top Running Backs by RBR (2015–2025)</h2>
-      <p>
-        This chart displays the top five running backs each season based on a
-        custom Running Back Rating (RBR), developed to measure both efficiency
-        and production.
-      </p>
-      <img src="figures/top5_rb_by_year.png" alt="Top RBs by RBR" />
-    </section>
-
-    <!-- NEW EXPLANATION SECTION -->
     <section class="explanation">
       <h2>How the Metrics Work</h2>
 
       <h3>Quarterback Rating (QBR)</h3>
       <p>
-        Total Quarterback Rating (QBR) is ESPN’s comprehensive quarterback
-        metric designed to measure a player’s overall contribution to winning.
-        It is built on Expected Points Added (EPA) and incorporates passing,
-        rushing, sacks, turnovers, and penalties. The metric adjusts for game
-        context such as down, distance, score, time remaining, and opponent
-        strength. QBR is reported on a 0–100 scale, where 50 represents league
-        average performance.
+        Total Quarterback Rating (QBR) is ESPN’s comprehensive quarterback metric designed to measure
+        a player’s overall contribution to winning. It is built on Expected Points Added (EPA) and
+        incorporates passing, rushing, sacks, turnovers, and game context such as down, distance,
+        score, time remaining, and opponent strength. QBR is reported on a 0–100 scale, where 50
+        represents league average performance.
       </p>
 
       <h3>Running Back Rating (RBR)</h3>
       <p>
-        Running Back Rating (RBR) is a custom metric created for this project to
-        evaluate running back performance in a consistent, data-driven way.
-        RBR combines four season-level components: Success Rate, Yards per
-        Attempt, Total Rushing Yards, and Total Touchdowns. Each component is
-        normalized within a season and equally weighted, allowing the metric
-        to reflect both efficiency and workload rather than raw volume alone.
+        Running Back Rating (RBR) is a custom metric created for this project to evaluate running back
+        performance in a consistent, data-driven way. It combines Success Rate, Yards per Attempt,
+        Total Rushing Yards, and Total Touchdowns. Each component is normalized within a season and
+        equally weighted to reflect both efficiency and workload.
       </p>
     </section>
+
+    <section>
+      <h2>Top Players by Year (2015–2020)</h2>
+      <div class="chart-row">
+        <div class="chart-card">
+          <h3>Quarterbacks (QBR)</h3>
+          <img src="figures/top5_qb_2015_2020.png" alt="Top QBs by QBR (2015–2020)">
+        </div>
+        <div class="chart-card">
+          <h3>Running Backs (RBR)</h3>
+          <img src="figures/top5_rb_2015_2020.png" alt="Top RBs by RBR (2015–2020)">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Top Players by Year (2020–2025)</h2>
+      <div class="chart-row">
+        <div class="chart-card">
+          <h3>Quarterbacks (QBR)</h3>
+          <img src="figures/top5_qb_2020_2025.png" alt="Top QBs by QBR (2020–2025)">
+        </div>
+        <div class="chart-card">
+          <h3>Running Backs (RBR)</h3>
+          <img src="figures/top5_rb_2020_2025.png" alt="Top RBs by RBR (2020–2025)">
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
-    <p>
-      Data Source: Pro Football Reference & public NFL salary data.  
-      Analysis and visualization by Pranav Kumar Kaliaperumal.
-    </p>
+    <p>Data Source: Pro Football Reference & public NFL salary data.</p>
   </footer>
 </body>
 </html>
