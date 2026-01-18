@@ -1,11 +1,11 @@
 /* =========================================================
-   NFL Analysis – Dark Professional Theme
+   NFL Analysis – Dark Professional Theme (Single-column charts)
    ========================================================= */
 
 :root {
   --bg: #0b0f14;              /* near-black background */
   --panel: #111826;           /* section background */
-  --card: #e6e6e6;            /* LIGHT GREY cards */
+  --card: #e6e6e6;            /* light grey cards */
   --card-text: #111;          /* text on light cards */
   --border: rgba(255,255,255,0.12);
 
@@ -24,24 +24,25 @@ html, body {
   color: var(--text);
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height: 1.45;
+  overflow-x: hidden; /* prevent horizontal scrolling */
 }
 
 main {
-  max-width: 1200px;
+  max-width: 1100px; /* slightly narrower to avoid overflow */
   margin: 0 auto;
-  padding: 18px 16px 40px;
+  padding: 18px 14px 40px;
 }
 
 /* ===== Header / Nav ===== */
 header {
   background: linear-gradient(90deg, #0f1623, #0b0f14);
   border-bottom: 1px solid var(--border);
-  padding: 16px;
+  padding: 16px 14px;
 }
 
 header h1 {
   margin: 0 0 10px 0;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   letter-spacing: 0.3px;
 }
 
@@ -83,18 +84,13 @@ section p {
   font-size: 1rem;
 }
 
-/* ===== Chart grid (2 per row) ===== */
+/* =========================================================
+   SINGLE COLUMN CHART LAYOUT (one plot per line)
+   ========================================================= */
 .chart-row {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  align-items: start;
-}
-
-@media (max-width: 980px) {
-  .chart-row {
-    grid-template-columns: 1fr;
-  }
+  grid-template-columns: 1fr; /* one per row */
+  gap: 14px;
 }
 
 /* ===== Chart cards ===== */
@@ -112,13 +108,17 @@ section p {
   color: var(--card-text);
 }
 
-/* Control chart size (key fix) */
+/* Ensure images never overflow horizontally */
 .chart-card img {
   width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
-  max-height: 360px;
+
+  /* keep charts from feeling gigantic */
+  max-height: 420px;
   object-fit: contain;
+
   border-radius: 8px;
   background: #f2f2f2;
   padding: 6px;
@@ -126,9 +126,9 @@ section p {
 
 /* ===== Footer ===== */
 footer {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 22px auto 30px;
-  padding: 0 16px;
+  padding: 0 14px;
   color: var(--muted);
   font-size: 0.9rem;
 }
